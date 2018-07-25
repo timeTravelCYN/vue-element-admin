@@ -17,3 +17,10 @@ module.exports = merge(prodEnv, {
   BASE_API: '"https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin"',
 })
 ```
+
+## 组件 name 属性
+
+为组件设置 `name` 属性后，可以允许组件模板递归地调用自身
+
+## mixin
+
