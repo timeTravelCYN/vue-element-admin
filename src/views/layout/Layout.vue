@@ -3,18 +3,21 @@
     <div v-if="device === 'mobile' && sidebar.opened" class="drawer-bg" @click="handleClickOutside"></div>
     <sidebar class="sidebar-container"></sidebar>
     <div class="main-container">
-
+      <Navbar></Navbar>
+      <app-main></app-main>
     </div>
   </div>
 </template>
 
 <script>
-import { Sidebar } from "./components";
+import { Sidebar, AppMain, Navbar } from "./components";
 import ResizeMixin from './mixin/ResizeHandler'
 export default {
   name: "layout",
   components: {
-    Sidebar
+    Sidebar,
+    AppMain,
+    Navbar
   },
   mixins: [ResizeMixin],
   computed: {
@@ -29,7 +32,7 @@ export default {
         hideSidebar: !this.sidebar.opened,
         openSidebar: this.sidebar.opened,
         withoutAnimation: this.sidebar.withoutAnimation,
-        mobile: this.device === "mibole"
+        mobile: this.device === "mobile"
       };
     }
   },

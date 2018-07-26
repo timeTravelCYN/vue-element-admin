@@ -10,6 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/en'
 import '@/icons'
 import '@/styles/index.scss'
+import './permission'
 
 Vue.use(ElementUI, { locale })
 
